@@ -1,0 +1,27 @@
+BACKUP_DIRECTORY: 'Backup'
+WORKING_DIRECTORY: 'C:\Users\Sergey\Desktop\arbeitauslagern-attachments'
+
+# Scheduler settings
+# ---------------------------
+cron:
+  year: '*'
+  month: '*'
+  week: '*'
+  day: '*'
+  day_of_week: '*'
+  hour: '*'
+  minute: '*'
+  # runs every minute at 30 seconds
+  second: '30'
+
+# General settings
+# ---------------------------
+# Remove .tmp files after N runs
+clean_after: 5
+# Ignores MD5 checks
+force_rescan: false
+
+show_console: true
+notifications: false
+
+run_first_job_immediately_on_startup: true

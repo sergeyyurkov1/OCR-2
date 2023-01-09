@@ -1,0 +1,17 @@
+--prefer-binary
+
+apscheduler
+pikepdf
+ocrmypdf
+pystray
+ruamel.yaml
+pywin32
+pypdf
+
+pytesseract
+opencv-contrib-python
+imutils
+img2pdf
+
+# black
+# isort

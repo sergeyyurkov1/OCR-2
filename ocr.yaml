@@ -1,0 +1,38 @@
+# Image cleaning settings -- only works if force_ocr is enabled
+# ---------------------------------------------------------------------------------
+# Attempts to straighten the image -- improves OCR accuracy
+deskew: true
+rotate_pages: true
+# Confidence level for rotation: default -- 5. A lower value will lead to more false positives
+rotate_pages_threshold: 5
+clean: true
+# Empty by default; OK for most cases
+unpaper_args: ''
+
+# ---------------------------------------------------------------------------------
+# Tesseract languages
+l: 'deu+eng'
+# Removes existing OCR layer, performs detailed analysis, keeps existing text and vector objects, skips the image processing step --
+# good for mixed-content pdfs but is less accurate with documents containing no text, a.k.a full-image pdfs
+# MOST SAFE -- only works if force_ocr is disabled
+redo_ocr: true
+# Outputs standard 'pdf' and not 'pdfa' (archive) that alters the structure of a document
+output_type: 'pdf'
+# 0 -- turns off pdf optimization but increases file size; default -- 1: lossless compression
+optimize: 0
+# This setting will skip pages more than N megapixels in size
+skip_big: 150
+# In seconds
+tesseract_timeout: 120
+# if set to 'true', uses threading -- slower but is less likely to hang;
+# if set to 'false', uses multiprocessing -- faster but is more likely to hang
+use_threads: true
+
+# NOT IMPLEMENTED
+# File size threshold in KB: this setting skips oversampling images during OCR for files above the threshold (oversampling helps increase OCR quality).
+# Too big of a file that gets oversampled may hang the OCR process and make it run indefinitely
+# big_file_threshold: 4000
+
+output_txt: false
+
+logging: false
