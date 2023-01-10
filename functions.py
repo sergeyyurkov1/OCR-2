@@ -24,7 +24,7 @@ yaml = YAML(typ="rt", pure=True)
 yaml.preserve_quotes = True
 yaml.default_flow_style = False
 
-fw = win32gui.GetForegroundWindow()
+fw = win32gui.FindWindowEx(None, None, None, "Tesseract OCR")
 
 
 FIELDNAMES = ["MD5/PDF ID", "Date OCRed", "Name", "Problematic/Force OCR"]

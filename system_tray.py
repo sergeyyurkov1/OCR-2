@@ -98,6 +98,10 @@ class SystemTray:
         elif self.show_console == False:
             hide_console()
 
+        config = read_yaml("config.yaml")
+        config["show_console"] = self.show_console
+        write_yaml("config.yaml", config)
+
     def notifications_handler(self, Icon, MenuItem):
         self.notifications = not MenuItem.checked
         self.icon.update_menu()

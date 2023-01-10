@@ -37,6 +37,7 @@ from functions import (
     get_file_a_m_time,
     set_file_a_m_time,
     get_file_size_kb,
+    hide_console
 )
 
 
@@ -351,9 +352,10 @@ def cleanup() -> None:
 # ---------------------------
 def main():
     config = read_yaml("config.yaml")
-
+        
     # Setup
     # ---------------------------
+    
     st = SystemTray()
 
     # Turns off unrelated warnings

@@ -21,7 +21,7 @@ clean_after: 5
 # Ignores MD5 checks
 force_rescan: false
 
-show_console: true
+show_console: false
 notifications: false
 
 run_first_job_immediately_on_startup: true
